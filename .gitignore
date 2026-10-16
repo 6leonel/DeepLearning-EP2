@@ -15,3 +15,15 @@
 local.properties
 
 .idea/
+
+/backend/.venv/
+
+/backend/modelo/
+
+/backend/pruebas/
+/backend/modelo_yunet/
+__pycache__/
+*.pyc
+*.keras
+*.onnx
+*.apk
