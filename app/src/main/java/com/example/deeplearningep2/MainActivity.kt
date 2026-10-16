@@ -583,9 +583,7 @@ fun PantallaReconocimiento() {
 
                     Column(
                         modifier = Modifier.padding(16.dp),
-
-                        verticalArrangement =
-                            Arrangement.spacedBy(8.dp)
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
 
                         Text(
@@ -595,69 +593,24 @@ fun PantallaReconocimiento() {
 
                         Text(
                             text = if (respuesta.enBase) {
-                                "Coincidencia propuesta"
+                                "Reconocido en la base de datos"
                             } else {
-                                "Identidad no verificada"
+                                "No reconocido en la base de datos"
                             },
-
                             color = if (respuesta.enBase) {
                                 MaterialTheme.colorScheme.primary
                             } else {
                                 MaterialTheme.colorScheme.error
-                            }
-                        )
-
-                        Text(
-                            text = respuesta.nombre,
-
-                            style =
-                                MaterialTheme.typography.titleMedium
-                        )
-
-                        Text(
-                            text = String.format(
-                                Locale.US,
-                                "Confianza: %.2f%%",
-                                respuesta.confianza * 100.0
-                            )
-                        )
-
-                        // MOTIVO DE RECHAZO
-
-                        respuesta.motivo?.let { motivo ->
-
-                            when (motivo) {
-
-                                "sin_rostro" -> {
-                                    Text(
-                                        "YuNet no detecto un rostro."
-                                    )
-                                }
-
-                                "varios_rostros" -> {
-                                    Text(
-                                        "Se detectaron varios rostros. Usa una foto individual."
-                                    )
-                                }
-                            }
-                        }
-
-                        Text(
-                            text =
-                                "El umbral del 70% es provisional. " +
-                                        "Una confianza alta no garantiza la identidad.",
-
-                            style =
-                                MaterialTheme.typography.bodySmall
+                            },
+                            style = MaterialTheme.typography.titleMedium
                         )
                     }
                 }
             }
 
             // =================================
-            // MOSTRAR ERRORES
+            // ERRORES
             // =================================
-
             error?.let { mensaje ->
 
                 Card(
