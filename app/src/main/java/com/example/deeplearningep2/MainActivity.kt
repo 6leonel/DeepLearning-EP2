@@ -55,14 +55,14 @@ import java.util.Locale
 // 1. CONFIGURACION DE LAS API
 // ============================================
 
-// Desde el emulador Android, 10.0.2.2
+// Desde el emulador Android, 100.67.242.82
 // permite comunicarse con Windows.
 
 private const val URL_API_ANTIGUA =
-    "http://10.0.2.2:8000/predecir"
+    "http://100.67.242.82:8000/predecir"
 
 private const val URL_API_YUNET =
-    "http://10.0.2.2:8000/predecir-yunet"
+    "http://100.67.242.82:8000/predecir-yunet"
 
 private const val PERMISO_RED_LOCAL =
     "android.permission.ACCESS_LOCAL_NETWORK"
